@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Agdasima:wght@700&family=Belanosima&family=Cairo:wght@500;600;700&family=Inter:wght@200;300;500&family=Open+Sans:wght@300;400;600;700&family=Poppins:wght@300;800&family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div id="content" class="content">
+        <div class="card">
+          <h1>Stay updated!</h1>
+          <p style="width: 300px; margin-left: 8px">
+            join 60,000+ product managers receiving monthly updates on:
+          </p>
+          <div class="stab">
+            <img src="./images/icon-list.svg" alt="" />
+            <p>product discovery and building what matters</p>
+          </div>
+
+          <div class="stab">
+            <img src="./images/icon-list.svg" alt="" />
+            <p>product discovery and building what matters</p>
+          </div>
+
+          <div class="stab">
+            <img src="./images/icon-list.svg" alt="" />
+            <p>product discovery and building what matters</p>
+          </div>
+
+          <form>
+            <div style="width: 280px">
+              <label class="label" for=""> Email address </label>
+              <p id="p_eror" class="p_eror" style="color: brown">
+                Email is not valid
+              </p>
+            </div>
+            <input type="text" name="email" placeholder="Email@company.com" />
+            <button id="but">Subscribe to monthly newsletter</button>
+          </form>
+        </div>
+
+        <div class="img">
+          <img
+            class="img_des"
+            src="./images/illustration-sign-up-desktop.svg"
+            alt=""
+          />
+          <img
+            class="img_mob"
+            src="./images/illustration-sign-up-mobile.svg"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+
+    <div id="cont" class="cont">
+      <div id="success" class="success">
+        <img style="width: 45px" src="./images/icon-success.svg" alt="" />
+        <h1>Thanks for Subscribing!</h1>
+        <p id="prga">
+          A confirmation email has been sent to <span id="span"> </span> Please
+          open it and click the button inside to confirm your subscription.
+        </p>
+        <button id="button" class="button">Dismiss message</button>
+      </div>
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
