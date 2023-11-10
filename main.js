@@ -1,4 +1,9 @@
-let userEmail = document.querySelector("[name = email]");
+const userEmail = document.querySelector("[name = email]");
+const successEmail = document.getElementById("success");
+const enterEmail = document.getElementById("content");
+const Email = document.getElementById("span");
+const eror = document.getElementById("p_eror");
+const button = document.getElementById("button");
 
 const validateEmail = (Email) => {
   return String(Email)
@@ -8,30 +13,26 @@ const validateEmail = (Email) => {
     );
 };
 
-window.onload = function () {
-  document.getElementById("success").style.display = "none";
-};
 document.forms[0].onsubmit = function (e) {
   e.preventDefault();
   if (validateEmail(userEmail.value)) {
-    document.getElementById("success").style.display = "block";
-    document.getElementById("content").style.display = "none";
-
-    document.getElementById("span").innerText = userEmail.value;
-    document.getElementById("span").style.fontWeight = " bold";
+    successEmail.classList.add("ShowItem");
+    enterEmail.classList.add("HideItem");
+    Email.innerText = userEmail.value;
+    Email.style.classList.add("Bold");
   } else {
-    document.getElementById("p_eror").style.display = "block";
+    userEmail.classList.add("StyleInputEmail");
+    eror.classList.add("ShowItem");
+    console.log(userEmail);
   }
 };
 
-document.getElementById("button").onclick = function (e) {
+button.onclick = function (e) {
   e.preventDefault();
 
-  document.getElementById("success").style.display = "none";
-  document.getElementById("content").style.display = "flex";
+  successEmail.classList.add("HideItem");
+  enterEmail.classList.add("Flex");
 
-  document.querySelector("[name = email]").value = "";
-  document.getElementById("p_eror").style.display = "none";
-
-  // userEmail.value
+  userEmail.value = "";
+  eror.classList.add("HideItem");
 };
