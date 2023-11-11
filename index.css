@@ -7,32 +7,30 @@
     font-family: 'Open Sans', sans-serif;
     font-family: 'Poppins', sans-serif;
     font-family: 'Roboto', sans-serif;
-
-    box-sizing: border-box;  
-    margin: 0px;
-    padding: 0px;
     --main-bg-color: #36384d;
 }
 
 body{
     background-color:var(--main-bg-color) ;
+    box-sizing: border-box;  
+    margin: 0px;
+    padding: 0px;
 }
 
 .container{
     display: flex;
     justify-content: center;
+    margin-top: 10%;
 }
-.content{
+.card{
     background-color: white;
     width: 600px;
+    height: 390px;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0px 10px 0px 10px;
-    border-radius: 20px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);   
+    border-radius: 20px; 
 }
 
 h1{
@@ -42,6 +40,7 @@ h1{
 .img{
     width: 100%;
 }
+
 .img_des{
     max-width: 245px;
 }
@@ -55,6 +54,7 @@ h1{
     align-items: center;
     gap: 15px;
     margin-bottom: -10px;
+    font-size: small;
 }
 
 .content .card p{
@@ -62,7 +62,7 @@ h1{
     font-size: small;
 }
 
-.content .card {
+.card .left_card {
     padding: 20px;
 }
  
@@ -75,30 +75,40 @@ h1{
 }
 
 form{
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 form div{
+    width: 280px;
     display: flex;
-    align-items: center;
+    align-items: baseline;
+    justify-content: space-between;
+    font-size: small;
+    font-weight: bold;
+}
+
+.Bold{
+    font-weight: bold;
 }
 
 .p_eror{
     display: none;
-    margin-left: auto;
+    float: left;
+    font-size: small;
+    align-items: center;
 }
 
 input{
     width: 85%;
-    padding: 10px;
+    padding: 8px;
     border-radius: 5px;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
     border: solid 1px var(--main-bg-color);
 }
 
 button{
     width: 92%;
-    padding: 10px;
+    padding: 8px;
     border-radius: 5px;
     border: solid 1px var(--main-bg-color);
     background-color: var(--main-bg-color);
@@ -107,26 +117,13 @@ button{
     font-weight: bold;
 }
 
-.cont{
-    display: none; 
-    display: flex;
-    height: 97vh;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    
-}
-
 .success{
-    width: 250px;
-    max-height: 250px;
+    display: none;
+    width: 265px;
+    max-height: 280px;
     background-color: white;
     padding: 30px;
     border-radius: 10px;
-    position: absolute;
-    top: 50%;
-    left: 35%;
-    transform: translateY(-50%);
 }
 
 .cont .success h1{
@@ -144,21 +141,40 @@ button{
     border-color: hsl(356deg 91% 66%);
 }
 
+.ShowItem{
+    display: block;
+}
+
+.HideItem{
+    display: none;
+}
+
+.Flex{
+    display: flex;
+}
+
+.StyleInputEmail{
+    background-color: brown;
+    color: brown;
+}
+
 
 @media (max-width: 480px){
 
-    .content{
+    .container{
+        height: 83vh;  
+        align-items: center;
+        
+    }
+
+    .card {
         display: flex;
         flex-direction: column-reverse;
-        width: -webkit-fill-available;
-        transform: none;
-        top: 0px;
-        justify-content: end;
         padding: 0px;
     }
 
-    .content .card {
-         padding: 0px;
+    .card .left_card {
+        padding-bottom: inherit;
     }
 
     body{
@@ -169,19 +185,36 @@ button{
         display: block;
         width: 100%;
     }
-    .img{
-        width: 100%;
-    }
 
-    .img_des{
+     .img_des{
         display: none;
     }
+   
+    form{
+        margin-top: 20px;
+    }
 
-    .cont{
+    input{
+        width: -webkit-fill-available;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        padding: 15px;
+    }
+
+    button{
+        padding: 15px;
+        width: -webkit-fill-available;
+    }
+
+    p{
+        font-size: initial;
+    }
+
+    /* .cont{
         align-items: flex-start;
         margin-top: 80px;
         height: 80vh;
-    }
+    } */
 
     .success{
         padding-left: 0px;
