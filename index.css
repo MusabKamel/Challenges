@@ -141,21 +141,13 @@ button{
     border-color: hsl(356deg 91% 66%);
 }
 
-.ShowItem{
-    display: block;
-}
-
-.HideItem{
-    display: none;
-}
-
-.Flex{
-    display: flex;
-}
-
 .StyleInputEmail{
-    background-color: brown;
+    background-color: rgb(175, 107, 107);
     color: brown;
+}
+
+.Bold{
+    font-weight: bold;
 }
 
 

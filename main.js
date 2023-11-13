@@ -16,23 +16,23 @@ const validateEmail = (Email) => {
 document.forms[0].onsubmit = function (e) {
   e.preventDefault();
   if (validateEmail(userEmail.value)) {
-    successEmail.classList.add("ShowItem");
-    enterEmail.classList.add("HideItem");
+    userEmail.classList.remove("StyleInputEmail");
+    successEmail.style.display = "block";
+    enterEmail.style.display = "none";
     Email.innerText = userEmail.value;
-    Email.style.classList.add("Bold");
+    Email.classList.add("Bold");
   } else {
     userEmail.classList.add("StyleInputEmail");
-    eror.classList.add("ShowItem");
-    console.log(userEmail);
+    eror.style.display = "block";
   }
 };
 
 button.onclick = function (e) {
   e.preventDefault();
 
-  successEmail.classList.add("HideItem");
-  enterEmail.classList.add("Flex");
+  successEmail.style.display = "none";
+  enterEmail.style.display = "flex";
 
   userEmail.value = "";
-  eror.classList.add("HideItem");
+  eror.style.display = "none";
 };
